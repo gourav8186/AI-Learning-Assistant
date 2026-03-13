@@ -40,7 +40,7 @@ const flashcardSchema = new mongoose.Schema({
     timestamps: true
 })
 
-// Index for fastest retrieval of flashcards by user and document, ensuring one flashcard set per document per user
+// Index for fastest retrieval of flashcards by user and document
 flashcardSchema.index({ userId: 1, documentId: 1 }, { unique: true });
 
 const Flashcard = mongoose.model('Flashcard', flashcardSchema);
