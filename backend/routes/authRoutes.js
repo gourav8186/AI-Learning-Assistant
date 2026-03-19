@@ -26,6 +26,6 @@ router.post('/login', loginValidation, login);
 // Protected routes
 router.get('/profile', protect, getProfile);
 router.put('/profile', protect, updateProfile);
-router.post('change-password', protect, changePassword);
+router.post('/change-password', protect, changePassword);
 
 export default router;
